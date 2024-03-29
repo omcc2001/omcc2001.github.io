@@ -35,7 +35,7 @@ var contacts = [
         image: "",
     },
     {
-        name: "Sophia Pothen",
+        name: "Dr. Sophia Pothen",
         role: "Sunday School Coordinator",
         image: "",
     },
