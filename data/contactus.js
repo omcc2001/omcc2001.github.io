@@ -8,8 +8,8 @@ var contacts = [
     {
         name: "Anitha Varughese", 
         role: "Treasurer", 
-        email: "",
-        image: "",
+        email: "anitav70@gmail.com",
+        image: "anitha-varughese.webp",
     },
     {
         name: "Mercy Thomas",
@@ -61,7 +61,7 @@ var contacts = [
     },
 ];
 // HTML string to hold the generated content
-var contactsHTML = ``;
+var contactsHTML = `<p class="lead text-center">Email: <a href="mailto:omcc2001@gmail.com" target="_blank">omcc2001@gmail.com</a>`;
 
 // Generating HTML for each contact
 contacts.forEach(function(contact) {
@@ -72,7 +72,7 @@ contacts.forEach(function(contact) {
         <h5 class="card-title">${contact.name}
         `;
         if(contact.email != "") {
-            contactsHTML += `&nbsp;<a href="mailto:${contact.email}"><i class="bi bi-envelope"></i></h5></a>`;
+            contactsHTML += `&nbsp;<a href="mailto:${contact.email}"><i class="fa-solid fa-envelope"></i></h5></a>`;
         }
         contactsHTML+= `</h5><p class="card-text text-secondary">${contact.role}</p>
     </div>

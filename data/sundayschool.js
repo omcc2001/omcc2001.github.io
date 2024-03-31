@@ -37,7 +37,7 @@ var sundayschool = [
     },
     {
         date: new Date("2024-05-12"), 
-        time: "2:00 PM", 
+        time: "12:00 PM", 
         location: SACC, 
         notes: "Diocesan Exam"
     },

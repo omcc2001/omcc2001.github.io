@@ -4,7 +4,7 @@ var worshipservices = [
         time: "9:30 AM", 
         denomination: "Mar Thoma", 
         priest:"Rev. Joymon SK",
-        location: "SACC", 
+        location: SACC, 
         notes: ""
     },
     {
@@ -12,7 +12,7 @@ var worshipservices = [
         time: "9:30 AM", 
         denomination: "Mar Thoma", 
         priest:"Rev. Joymon SK",
-        location: "SACC", 
+        location: SACC, 
         notes: ""
     },
     {
@@ -20,7 +20,7 @@ var worshipservices = [
         time: "9:30 AM", 
         denomination: "Mar Thoma", 
         priest:"Rev. Joymon S.K.",
-        location: "SACC", 
+        location: SACC, 
         notes: ""
     },
     {
@@ -28,7 +28,7 @@ var worshipservices = [
         time: "9:30 AM", 
         denomination: "CSI", 
         priest:"Rev. Dr. Itty Mathews",
-        location: "SACC", 
+        location: SACC, 
         notes: "Annual General Body Meeting"
     },
     {
@@ -36,7 +36,7 @@ var worshipservices = [
         time: "9:30 AM", 
         denomination: "Mar Thoma", 
         priest:"Rev. Joymon S.K.",
-        location: "SACC", 
+        location: SACC, 
         notes: ""
     },
     {
@@ -44,7 +44,7 @@ var worshipservices = [
         time: "9:30 AM", 
         denomination: "Mar Thoma", 
         priest:"Rev. Joymon S.K.",
-        location: "SACC", 
+        location: SACC, 
         notes: ""
     },
     {
@@ -52,7 +52,7 @@ var worshipservices = [
         time: "9:30 AM", 
         denomination: "Mar Thoma", 
         priest:"Rev. Joymon S.K.",
-        location: "SACC", 
+        location: SACC, 
         notes: ""
     },
     {
@@ -60,7 +60,7 @@ var worshipservices = [
         time: "9:30 AM", 
         denomination: "Mar Thoma", 
         priest:"Rev. Joymon S.K.",
-        location: "SACC", 
+        location: SACC, 
         notes: ""
     },
     {
@@ -68,7 +68,7 @@ var worshipservices = [
         time: "9:30 AM", 
         denomination: "Mar Thoma", 
         priest:"Rev. Joymon S.K.",
-        location: "SACC", 
+        location: SACC, 
         notes: ""
     },
 ];
