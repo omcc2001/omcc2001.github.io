@@ -1,6 +1,6 @@
 var achens = [
     {
-        name: "Rev. Dr. Itty Matthews",
+        name: "Rev. Dr. Itty Mathews",
         denomination: "CSI",
         description: "Vicar of Church of South India Congregation of Michigan, Detroit, MI",
         image: "",
