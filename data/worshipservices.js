@@ -32,6 +32,14 @@ var worshipservices = [
         notes: "Annual General Body Meeting"
     },
     {
+        date: new Date("2024-05-04"), 
+        time: "9:30 AM", 
+        denomination: "Jacobite", 
+        priest:"Rev. barghese P. Kuriakose",
+        location: SACC, 
+        notes: ""
+    },
+    {
         date: new Date("2024-05-25"), 
         time: "9:30 AM", 
         denomination: "Mar Thoma", 
