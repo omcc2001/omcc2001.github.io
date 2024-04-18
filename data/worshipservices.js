@@ -35,7 +35,7 @@ var worshipservices = [
         date: new Date("2024-05-04"), 
         time: "9:30 AM", 
         denomination: "Jacobite", 
-        priest:"Rev. barghese P. Kuriakose",
+        priest:"Rev. Varghese P. Kuriakose",
         location: SACC, 
         notes: ""
     },
