@@ -17,8 +17,8 @@ var achens = [
         name: "Rev. Joymon S.K.",
         denomination: "Mar Thoma",
         description: "Vicar of St. Thomas Mar Thoma Church, Indianapolis, IN",
-        image: "",
-        email: ""
+        image: "joymon.webp",
+        email: "revjoymon@gmail.com"
     }
 ];
 
@@ -29,7 +29,7 @@ var achensHTML = ``;
 achens.forEach(function(achen) {
     achensHTML += `
     <div class='card m-3 shadow' style='width: 25rem;'>
-    <img oncontextmenu="return false;" onerror="if (this.src != '/images/compressed/contactus/${achen.image}') this.src = '/images/original/contactus/placeholder.png';" loading="lazy" src='/images/compressed/contactus/${achen.image}' class='mt-3 rounded w-100 h-100' alt='${achen.name}' style='object-fit: cover;'>
+    <img oncontextmenu="return false;" onerror="if (this.src != '/images/compressed/achens/${achen.image}') this.src = '/images/original/contactus/placeholder.png';" loading="lazy" src='/images/compressed/achens/${achen.image}' class='mt-3 rounded w-100 h-100' alt='${achen.name}' style='object-fit: cover;'>
     <div class="card-body">
         <h5 class="card-title">${achen.name}</h5>
         <p class="card-text text-secondary">${achen.denomination}</p>

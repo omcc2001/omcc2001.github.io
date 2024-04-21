@@ -1,38 +1,38 @@
 var prayermeetings = [ 
     {
-        date: new Date("2024-05-11"), 
+        date: new Date("2024-10-05"), 
         time: "4:00 PM", 
-        location: "Rajani & Jacob Naduparambil", 
+        host: "Rajani & Jacob Naduparambil", 
         notes: ""
     },
     {
         date: new Date("2024-08-10"), 
         time: "4:00 PM", 
-        location: "Anitha & Santosh Varughese", 
+        host: "Anitha & Santosh Varughese", 
         notes: ""
     },
     {
         date: new Date("2024-07-06"), 
         time: "4:00 PM", 
-        location: "Jimcy & Jacob Jayan", 
+        host: "Jimcy & Jacob Jayan", 
         notes: ""
     },
     {
         date: new Date("2024-05-11"), 
         time: "4:00 PM", 
-        location: "Bindya & Bright", 
+        host: "Bindya & Bright Devakadaksham Lilly", 
         notes: ""
     },
     {
         date: new Date("2023-05-10"), 
         time: "4:00 PM", 
-        location: "Abraham & Mercy Thomas", 
+        host: "Abraham & Mercy Thomas", 
         notes: ""
     }
 ];
 
 // Sorting the worshipservices array by date in ascending order
-prayermeetings.sort((a, b) => a.date - b.date);
+prayermeetings.sort((a, b) => b.date - a.date);
 
 // Adding table with data to HTML
 var tableHTML = `
@@ -41,7 +41,7 @@ var tableHTML = `
 <tr>
 <th scope='col'>Date</th>
 <th scope='col'>Time</th>
-<th scope='col'>Location</th>
+<th scope='col'>Host</th>
 <th scope='col'>Notes</th>
 </tr>
 </thead>
@@ -56,7 +56,7 @@ for(var i = prayermeetings.length - 1; i >= 0 && futureCount < 12; i--)
         <tr>
         <td>${prayermeetings[i].date.toString().substring(0,15)}</td>
         <td>${prayermeetings[i].time}</td>
-        <td>${prayermeetings[i].location}</td>
+        <td>${prayermeetings[i].host}</td>
         <td>${prayermeetings[i].notes}</td>
         </tr>
         `; 
