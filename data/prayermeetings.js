@@ -1,11 +1,34 @@
 var prayermeetings = [ 
     {
+        date: new Date("2024-05-11"), 
+        time: "4:00 PM", 
+        location: "Rajani & Jacob Naduparambil", 
+        notes: ""
+    },
+    {
+        date: new Date("2024-08-10"), 
+        time: "4:00 PM", 
+        location: "Anitha & Santosh Varughese", 
+        notes: ""
+    },
+    {
+        date: new Date("2024-07-06"), 
+        time: "4:00 PM", 
+        location: "Jimcy & Jacob Jayan", 
+        notes: ""
+    },
+    {
+        date: new Date("2024-05-11"), 
+        time: "4:00 PM", 
+        location: "Bindya & Bright", 
+        notes: ""
+    },
+    {
         date: new Date("2023-05-10"), 
         time: "4:00 PM", 
         location: "Abraham & Mercy Thomas", 
         notes: ""
-    },
-
+    }
 ];
 
 // Sorting the worshipservices array by date in ascending order
