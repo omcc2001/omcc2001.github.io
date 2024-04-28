@@ -6,10 +6,10 @@ var contacts = [
         image: "",
     },
     {
-        name: "Anitha Varughese", 
+        name: "Jacob Chacko", 
         role: "Treasurer", 
-        email: "anitav70@gmail.com",
-        image: "anitha-varughese.webp",
+        email: "",
+        image: "",
     },
     {
         name: "Gigi Mathew",
