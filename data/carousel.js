@@ -1,10 +1,10 @@
-var carouselHTML = ``;
-var folder = ["vbs23", 15];
+var folder = ["mercyfarewell", 10, "Worship Service & Farewell (4/27/2024)"];
+var carouselHTML = `<p class="text-center text-secondary my-3">${folder[2]}</p>`;
+var prevFolders = [["vbs23", 15, "Vacation Bible School 2023"]];
 
 for (var i = 1; i <= folder[1]; i++) {
     carouselHTML += `<div class="carousel-item${i === 1 ? ' active' : ''}" data-bs-interval="2000">
                         <img oncontextmenu="return false;" loading="eager" src="/images/compressed/carousel/${folder[0]}/${i}.webp" class="d-block w-100">
                     </div>`;
 }
-
 document.getElementById("carouselContainer").innerHTML = carouselHTML;

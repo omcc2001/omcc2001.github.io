@@ -12,7 +12,7 @@ var contacts = [
         image: "anitha-varughese.webp",
     },
     {
-        name: "Mercy Thomas",
+        name: "Gigi Mathew",
         role: "CSI Representative",
         email: "",
         image: "",
@@ -33,7 +33,7 @@ var contacts = [
         name: "Mercy Thomas",
         role: "Choir Coordinator",
         email: "",
-        image: "",
+        image: "mercy-thomas.webp",
     },
     {
         name: "Santhosh Varughese",
@@ -48,10 +48,10 @@ var contacts = [
         image: "",
     },
     {
-        name: "Matthew Ninan",
+        name: "Mathew Ninan",
         role: "Auditor",
         email: "",
-        image: "",
+        image: "mathew-ninan.webp",
     },
     {
         name: "Ben Kurian",
