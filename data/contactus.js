@@ -30,10 +30,10 @@ var contacts = [
         image: "jisna-paul.webp",
     },
     {
-        name: "Mercy Thomas",
+        name: "Lloyd George",
         role: "Choir Coordinator",
         email: "",
-        image: "mercy-thomas.webp",
+        image: "",
     },
     {
         name: "Santhosh Varughese",
