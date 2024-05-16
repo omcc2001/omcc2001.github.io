@@ -18,6 +18,12 @@ var prayermeetings = [
         notes: ""
     },
     {
+        date: new Date("2024-06-08"), 
+        time: "4:00 PM", 
+        host: "Preetha & Thomas Pullumpallil", 
+        notes: ""
+    },
+    {
         date: new Date("2024-05-11"), 
         time: "4:00 PM", 
         host: "Bindya & Bright Devakadaksham Lilly", 
