@@ -6,10 +6,10 @@ var contacts = [
         image: "",
     },
     {
-        name: "Anitha Varughese", 
+        name: "Jacob Chacko", 
         role: "Treasurer", 
-        email: "anitav70@gmail.com",
-        image: "anitha-varughese.webp",
+        email: "",
+        image: "",
     },
     {
         name: "Gigi Mathew",
@@ -30,10 +30,10 @@ var contacts = [
         image: "jisna-paul.webp",
     },
     {
-        name: "Mercy Thomas",
+        name: "Lloyd George",
         role: "Choir Coordinator",
         email: "",
-        image: "mercy-thomas.webp",
+        image: "",
     },
     {
         name: "Santhosh Varughese",
@@ -42,7 +42,7 @@ var contacts = [
         image: "santhosh-varughese.webp",
     },
     {
-        name: "Dr. Sophia Pothen",
+        name: "Diviya Jacob",
         role: "Sunday School Coordinator",
         email: "",
         image: "",
