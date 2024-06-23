@@ -41,6 +41,19 @@ var sundayschool = [
         location: SACC, 
         notes: "Diocesan Exam"
     },
+    {
+        date: new Date("2024-08-10"), 
+        time: "TBD", 
+        location: SACC, 
+        notes: "OMCC VBS: Day 1"
+    },
+    {
+        date: new Date("2024-08-11"), 
+        time: "TBD", 
+        location: SACC, 
+        notes: "OMCC VBS: Day 2"
+    },
+    
 
 ];
 

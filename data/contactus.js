@@ -1,15 +1,15 @@
 var contacts = [
     {
-        name: "Vineetha Thomas", 
+        name: "John Thomas", 
         role: "OMCC Coordinator", 
         email: "omcc2001@gmail.com",
         image: "",
     },
     {
-        name: "Jacob Chacko", 
+        name: "Anitha Varughese", 
         role: "Treasurer", 
-        email: "",
-        image: "",
+        email: "anitav70@gmail.com",
+        image: "anitha-varughese.webp",
     },
     {
         name: "Gigi Mathew",
@@ -30,10 +30,10 @@ var contacts = [
         image: "jisna-paul.webp",
     },
     {
-        name: "Lloyd George",
+        name: "Mercy Thomas",
         role: "Choir Coordinator",
         email: "",
-        image: "",
+        image: "mercy-thomas.webp",
     },
     {
         name: "Santhosh Varughese",

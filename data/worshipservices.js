@@ -49,7 +49,7 @@ var worshipservices = [
     },
     {
         date: new Date("2024-06-22"), 
-        time: "9:30 AM", 
+        time: "4:00 PM", 
         denomination: "Mar Thoma", 
         priest:"Rev. Joymon S.K.",
         location: SACC, 
