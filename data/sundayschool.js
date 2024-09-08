@@ -53,8 +53,198 @@ var sundayschool = [
         location: SACC, 
         notes: "OMCC VBS: Day 2"
     },
-    
-
+    {
+        date: new Date("2024-09-08"), 
+        time: "2:00 PM", 
+        location: ZOOM, 
+        notes: "First Day"
+    },
+    {
+        date: new Date("2024-09-15"), 
+        time: "2:00 PM", 
+        location: SACC, 
+        notes: ""
+    },
+    {
+        date: new Date("2024-09-22"), 
+        time: "2:00 PM", 
+        location: ZOOM, 
+        notes: "World Sunday School Day Song Practice"
+    },
+    {
+        date: new Date("2024-09-29"), 
+        time: "2:00 PM", 
+        location: ZOOM, 
+        notes: "World Sunday School Day Song Practice"
+    },
+    {
+        date: new Date("2024-10-06"), 
+        time: "2:00 PM", 
+        location: SACC, 
+        notes: "World Sunday School Day Song Recording"
+    },
+    {
+        date: new Date("2024-10-13"), 
+        time: "2:00 PM", 
+        location: ZOOM, 
+        notes: ""
+    },
+    {
+        date: new Date("2024-10-20"), 
+        time: "2:00 PM", 
+        location: ZOOM, 
+        notes: ""
+    },
+    {
+        date: new Date("2024-10-27"), 
+        time: "2:00 PM", 
+        location: ZOOM, 
+        notes: ""
+    },
+    {
+        date: new Date("2024-11-3"), 
+        time: "2:00 PM", 
+        location: SACC, 
+        notes: ""
+    },
+    {
+        date: new Date("2024-11-10"), 
+        time: "2:00 PM", 
+        location: ZOOM, 
+        notes: "Christmas Program Practice"
+    },
+    {
+        date: new Date("2024-11-17"), 
+        time: "2:00 PM", 
+        location: ZOOM, 
+        notes: "Christmas Program Practice"
+    },
+    {
+        date: new Date("2024-11-23"), 
+        time: "2:00 PM", 
+        location: SACC, 
+        notes: "Christmas Program Practice"
+    },
+    {
+        date: new Date("2024-11-24"), 
+        time: "2:00 PM", 
+        location: ZOOM, 
+        notes: "TBD"
+    },
+    {
+        date: new Date("2024-12-08"), 
+        time: "2:00 PM", 
+        location: ZOOM, 
+        notes: ""
+    },
+    {
+        date: new Date("2025-01-05"), 
+        time: "2:00 PM", 
+        location: ZOOM, 
+        notes: ""
+    },
+    {
+        date: new Date("2025-01-12"), 
+        time: "2:00 PM", 
+        location: ZOOM, 
+        notes: ""
+    },
+    {
+        date: new Date("2025-01-19"), 
+        time: "2:00 PM", 
+        location: ZOOM, 
+        notes: ""
+    },
+    {
+        date: new Date("2025-01-19"), 
+        time: "2:00 PM", 
+        location: ZOOM, 
+        notes: ""
+    },
+    {
+        date: new Date("2025-01-26"), 
+        time: "2:00 PM", 
+        location: ZOOM, 
+        notes: ""
+    },
+    {
+        date: new Date("2025-02-02"), 
+        time: "2:00 PM", 
+        location: ZOOM, 
+        notes: ""
+    },
+    {
+        date: new Date("2025-02-09"), 
+        time: "2:00 PM", 
+        location: ZOOM, 
+        notes: ""
+    },
+    {
+        date: new Date("2025-02-16"), 
+        time: "2:00 PM", 
+        location: ZOOM, 
+        notes: ""
+    },
+    {
+        date: new Date("2025-02-23"), 
+        time: "2:00 PM", 
+        location: ZOOM, 
+        notes: ""
+    },
+    {
+        date: new Date("2025-03-02"), 
+        time: "2:00 PM", 
+        location: ZOOM, 
+        notes: ""
+    },
+    {
+        date: new Date("2025-03-09"), 
+        time: "2:00 PM", 
+        location: ZOOM, 
+        notes: ""
+    },
+    {
+        date: new Date("2025-03-16"), 
+        time: "2:00 PM", 
+        location: ZOOM, 
+        notes: ""
+    },
+    {
+        date: new Date("2025-03-23"), 
+        time: "2:00 PM", 
+        location: ZOOM, 
+        notes: ""
+    },
+    {
+        date: new Date("2025-04-06"), 
+        time: "2:00 PM", 
+        location: ZOOM, 
+        notes: ""
+    },
+    {
+        date: new Date("2025-04-13"), 
+        time: "2:00 PM", 
+        location: ZOOM, 
+        notes: ""
+    },
+    {
+        date: new Date("2025-04-27"), 
+        time: "2:00 PM", 
+        location: ZOOM, 
+        notes: ""
+    },
+    {
+        date: new Date("2025-05-04"), 
+        time: "2:00 PM", 
+        location: ZOOM, 
+        notes: ""
+    },
+    {
+        date: new Date("2025-05-11"), 
+        time: "2:00 PM", 
+        location: "", 
+        notes: "Last Day"
+    },
 ];
 
 // Sorting the worshipservices array by date in ascending order

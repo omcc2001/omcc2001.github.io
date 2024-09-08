@@ -79,6 +79,14 @@ var worshipservices = [
         location: SACC, 
         notes: ""
     },
+    {
+        date: new Date("2024-12-14"), 
+        time: "TBD", 
+        denomination: "", 
+        priest:"",
+        location: SACC, 
+        notes: "Christmas Service"
+    },
 ];
 
 // Sorting the worshipservices array by date in ascending order
