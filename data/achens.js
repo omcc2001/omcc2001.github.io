@@ -7,10 +7,10 @@ var achens = [
         email: ""
     },
     {
-        name: "Rev. Varghese P. Kuriakose",
+        name: "Rev. Fr. Movin Varghese",
         denomination: "Jacobite",
         description: "Vicar of St. Mary's Syrian Orthodox Church, Detroit, MI",
-        image: "",
+        image: "movin-varghese.webp",
         email: ""
     },
     {

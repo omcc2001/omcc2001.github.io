@@ -1,8 +1,14 @@
 var prayermeetings = [ 
     {
         date: new Date("2024-10-05"), 
-        time: "4:00 PM", 
-        host: "Rajani & Jacob Naduparambil", 
+        time: "7:00 PM", 
+        host: "", 
+        notes: "Zoom"
+    },
+    {
+        date: new Date("2024-09-07"), 
+        time: "5:00 PM", 
+        host: "Drs. Jisna & Matthew Cherian", 
         notes: ""
     },
     {

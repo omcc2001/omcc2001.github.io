@@ -80,12 +80,28 @@ var worshipservices = [
         notes: ""
     },
     {
+        date: new Date("2024-10-26"), 
+        time: "9:30 AM", 
+        denomination: "Mar Thoma", 
+        priest:"Rev. Joymon S.K.",
+        location: SACC, 
+        notes: ""
+    },
+    {
         date: new Date("2024-12-14"), 
-        time: "TBD", 
+        time: "6:00 PM", 
         denomination: "", 
         priest:"",
         location: SACC, 
         notes: "Christmas Service"
+    },
+    {
+        date: new Date("2025-01-25"), 
+        time: "9:30 AM", 
+        denomination: "", 
+        priest:"",
+        location: SACC, 
+        notes: ""
     },
 ];
 
