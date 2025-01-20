@@ -98,11 +98,27 @@ var worshipservices = [
     {
         date: new Date("2025-01-25"), 
         time: "9:30 AM", 
-        denomination: "", 
+        denomination: "Mar Thoma", 
         priest:"",
         location: SACC, 
         notes: ""
     },
+    {
+        date: new Date("2025-02-01"), 
+        time: "9:30 AM", 
+        denomination: "Jacobite", 
+        priest:"",
+        location: SACC, 
+        notes: "Tentative"
+    },
+    {
+        date: new Date("2025-02-22"), 
+        time: "9:30 AM", 
+        denomination: "Mar Thoma", 
+        priest:"",
+        location: SACC, 
+        notes: ""
+    }
 ];
 
 // Sorting the worshipservices array by date in ascending order
