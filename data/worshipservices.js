@@ -3,7 +3,7 @@ var worshipservices = [
         date: new Date("2024-02-24"), 
         time: "9:30 AM", 
         denomination: "Mar Thoma", 
-        priest:"Rev. Joymon SK",
+        priest:"Rev. Joymon S.K.",
         location: SACC, 
         notes: ""
     },
@@ -11,7 +11,7 @@ var worshipservices = [
         date: new Date("2024-01-27"), 
         time: "9:30 AM", 
         denomination: "Mar Thoma", 
-        priest:"Rev. Joymon SK",
+        priest:"Rev. Joymon S.K.",
         location: SACC, 
         notes: ""
     },
@@ -99,7 +99,7 @@ var worshipservices = [
         date: new Date("2025-01-25"), 
         time: "9:30 AM", 
         denomination: "Mar Thoma", 
-        priest:"",
+        priest:"Rev. Joymon S.K.",
         location: SACC, 
         notes: ""
     },
@@ -107,15 +107,15 @@ var worshipservices = [
         date: new Date("2025-02-01"), 
         time: "9:30 AM", 
         denomination: "Jacobite", 
-        priest:"",
+        priest:"Rev. Fr. Movin Varghese",
         location: SACC, 
-        notes: "Tentative"
+        notes: ""
     },
     {
         date: new Date("2025-02-22"), 
         time: "9:30 AM", 
         denomination: "Mar Thoma", 
-        priest:"",
+        priest:"Rev. Joymon S.K.",
         location: SACC, 
         notes: ""
     }
