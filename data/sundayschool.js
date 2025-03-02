@@ -250,6 +250,13 @@ var sundayschool = [
 // Sorting and reversing the array
 sundayschool.sort((a, b) => a.date - b.date).reverse();
 
+// Function to adjust the date by adding one day
+function adjustDate(date) {
+    const adjustedDate = new Date(date);
+    adjustedDate.setDate(adjustedDate.getDate() + 1); // Add one day
+    return adjustedDate.toString().substring(0, 15); // Format as "Day Month Date Year"
+}
+
 // Function to generate table rows for Sunday School
 function generateSundayTableRows(page, itemsPerPage) {
     var start = (page - 1) * itemsPerPage;
@@ -260,7 +267,7 @@ function generateSundayTableRows(page, itemsPerPage) {
     paginatedSessions.forEach(session => {
         rows += `
         <tr>
-            <td>${session.date.toString().substring(0, 15)}</td>
+            <td>${adjustDate(session.date)}</td>
             <td>${session.time}</td>
             <td>${session.location}</td>
             <td>${session.notes}</td>

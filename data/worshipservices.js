@@ -149,6 +149,13 @@ var worshipservices = [
 // Sorting and reversing the array
 worshipservices.sort((a, b) => a.date - b.date).reverse();
 
+// Function to adjust the date by adding one day
+function adjustDate(date) {
+    const adjustedDate = new Date(date);
+    adjustedDate.setDate(adjustedDate.getDate() + 1); // Add one day
+    return adjustedDate.toString().substring(0, 15); // Format as "Day Month Date Year"
+}
+
 // Function to generate table rows for worship services
 function generateWorshipTableRows(page, itemsPerPage) {
     var start = (page - 1) * itemsPerPage;
@@ -159,7 +166,7 @@ function generateWorshipTableRows(page, itemsPerPage) {
     paginatedServices.forEach(service => {
         rows += `
         <tr>
-            <td>${service.date.toString().substring(0, 15)}</td>
+            <td>${adjustDate(service.date)}</td>
             <td>${service.time}</td>
             <td>${service.denomination}</td>
             <td>${service.priest}</td>

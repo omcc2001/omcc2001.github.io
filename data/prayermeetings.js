@@ -76,6 +76,13 @@ var prayermeetings = [
 // Sorting and reversing the array
 prayermeetings.sort((a, b) => a.date - b.date).reverse();
 
+// Function to adjust the date by adding one day
+function adjustDate(date) {
+    const adjustedDate = new Date(date);
+    adjustedDate.setDate(adjustedDate.getDate() + 1); // Add one day
+    return adjustedDate.toString().substring(0, 15); // Format as "Day Month Date Year"
+}
+
 // Function to generate table rows for prayer meetings
 function generatePrayerTableRows(page, itemsPerPage) {
     var start = (page - 1) * itemsPerPage;
@@ -86,7 +93,7 @@ function generatePrayerTableRows(page, itemsPerPage) {
     paginatedMeetings.forEach(meeting => {
         rows += `
         <tr>
-            <td>${meeting.date.toString().substring(0, 15)}</td>
+            <td>${adjustDate(meeting.date)}</td>
             <td>${meeting.time}</td>
             <td>${meeting.host}</td>
             <td>${meeting.notes}</td>
