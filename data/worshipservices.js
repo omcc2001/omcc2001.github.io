@@ -3,7 +3,7 @@ var worshipservices = [
         date: new Date("2024-02-24"), 
         time: "9:30 AM", 
         denomination: "Mar Thoma", 
-        priest:"Rev. Joymon S.K.",
+        priest:"Rev. Joymon SK",
         location: SACC, 
         notes: ""
     },
@@ -11,7 +11,7 @@ var worshipservices = [
         date: new Date("2024-01-27"), 
         time: "9:30 AM", 
         denomination: "Mar Thoma", 
-        priest:"Rev. Joymon S.K.",
+        priest:"Rev. Joymon SK",
         location: SACC, 
         notes: ""
     },
@@ -104,10 +104,10 @@ var worshipservices = [
         notes: ""
     },
     {
-        date: new Date("2025-02-01"), 
+        date: new Date("2025-02-22"), 
         time: "9:30 AM", 
-        denomination: "Jacobite", 
-        priest:"Rev. Fr. Movin Varghese",
+        denomination: "", 
+        priest:"",
         location: SACC, 
         notes: ""
     },
@@ -118,51 +118,99 @@ var worshipservices = [
         priest:"Rev. Joymon S.K.",
         location: SACC, 
         notes: ""
-    }
+    },
+    {
+        date: new Date("2025-03-15"), 
+        time: "4:30 PM", 
+        denomination: "Mar Thoma", 
+        priest:"Rev. Joymon S.K.",
+        location: SACC, 
+        notes: "Achen's Farewell Service"
+    },
+    {
+        date: new Date("2025-04-12"), 
+        time: "9:30 AM", 
+        denomination: "Mar Thoma", 
+        priest:"Rev. Joymon S.K.",
+        location: SACC, 
+        notes: "Annual General Body Meeting"
+    },
+    {
+        date: new Date("2025-04-19"), 
+        time: "10:00 AM", 
+        denomination: "CSI", 
+        priest:"",
+        location: SACC, 
+        notes: ""
+    },
 ];
 
-// Sorting the worshipservices array by date in ascending order
-worshipservices.sort((a, b) => b.date - a.date);
 
-// Adding table with data to HTML
-var tableHTML = `
-<table class='table table-sm table-hover table-responsive'>
-<thead>
-<tr>
-<th scope='col'>Date</th>
-<th scope='col'>Time</th>
-<th scope='col'>Denomination</th>
-<th scope='col'>Priest</th>
-<th scope='col'>Location</th>
-<th scope='col'>Notes</th>
-</tr>
-</thead>
-<tbody>
-`;
+// Sorting and reversing the array
+worshipservices.sort((a, b) => a.date - b.date).reverse();
 
-var futureCount = 0;
-for (var i = worshipservices.length - 1; i >= 0 && futureCount < 12; i--) {
-    if(worshipservices[i].date.setHours(24,0,0,0) >= new Date().setHours(0,0,0,0)) {
-        tableHTML += `
+// Function to generate table rows for worship services
+function generateWorshipTableRows(page, itemsPerPage) {
+    var start = (page - 1) * itemsPerPage;
+    var end = start + itemsPerPage;
+    var paginatedServices = worshipservices.slice(start, end);
+
+    var rows = '';
+    paginatedServices.forEach(service => {
+        rows += `
         <tr>
-        <td>${worshipservices[i].date.toString().substring(0, 15)}</td>
-        <td>${worshipservices[i].time}</td>
-        <td>${worshipservices[i].denomination}</td>
-        <td>${worshipservices[i].priest}</td>
-        <td>${worshipservices[i].location}</td>
-        <td>${worshipservices[i].notes}</td>
+            <td>${service.date.toString().substring(0, 15)}</td>
+            <td>${service.time}</td>
+            <td>${service.denomination}</td>
+            <td>${service.priest}</td>
+            <td>${service.location}</td>
+            <td>${service.notes}</td>
         </tr>
         `;
-        futureCount++;
+    });
+    return rows;
+}
+
+// Function to generate pagination for worship services
+function generateWorshipPagination(page, itemsPerPage) {
+    var totalPages = Math.ceil(worshipservices.length / itemsPerPage);
+    var paginationHTML = `<nav aria-label="Page navigation">
+                            <ul class="pagination justify-content-center">`;
+    
+    for (var i = 1; i <= totalPages; i++) {
+        paginationHTML += `<li class="page-item ${i === page ? 'active' : ''}">
+                                <a class="page-link" href="#worshipservices" onclick="changeWorshipPage(${i})">${i}</a>
+                            </li>`;
     }
+    
+    paginationHTML += `</ul></nav>`;
+    return paginationHTML;
 }
 
-if(futureCount > 0) {
-    tableHTML += `</tbody></table>`;
-} else {
-    // Message for no data
-    tableHTML = `<p class='lead text-center'>No worship services scheduled<p>`;
+// Function to change the page for worship services
+function changeWorshipPage(page) {
+    var itemsPerPage = 5; // Number of items per page
+    var tableHTML = `
+    <table class='table table-sm table-hover table-responsive'>
+        <thead>
+            <tr>
+                <th scope='col'>Date</th>
+                <th scope='col'>Time</th>
+                <th scope='col'>Denomination</th>
+                <th scope='col'>Priest</th>
+                <th scope='col'>Location</th>
+                <th scope='col'>Notes</th>
+            </tr>
+        </thead>
+        <tbody>
+            ${generateWorshipTableRows(page, itemsPerPage)}
+        </tbody>
+    </table>`;
+    
+    var paginationHTML = generateWorshipPagination(page, itemsPerPage);
+    
+    document.getElementById("wsTable").innerHTML = tableHTML + paginationHTML;
 }
 
-// Set div's innerHTML to new HTML
-document.getElementById("wsTable").innerHTML = tableHTML;
+// Initial load for worship services
+changeWorshipPage(1);

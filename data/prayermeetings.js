@@ -1,5 +1,23 @@
 var prayermeetings = [ 
     {
+        date: new Date("2025-04-13"), 
+        time: "5:00 PM", 
+        host: "Preetha & Kurian Uthup", 
+        notes: ""
+    },
+    {
+        date: new Date("2025-02-01"), 
+        time: "5:00 PM", 
+        host: "Rajani & Jacob Naduparambil", 
+        notes: ""
+    },
+    {
+        date: new Date("2024-11-02"), 
+        time: "5:00 PM", 
+        host: "Sheena & Lloyd George", 
+        notes: ""
+    },
+    {
         date: new Date("2024-10-05"), 
         time: "7:00 PM", 
         host: "", 
@@ -55,45 +73,67 @@ var prayermeetings = [
     },
 ];
 
-// Sorting the worshipservices array by date in ascending order
-prayermeetings.sort((a, b) => b.date - a.date);
+// Sorting and reversing the array
+prayermeetings.sort((a, b) => a.date - b.date).reverse();
 
-// Adding table with data to HTML
-var tableHTML = `
-<table class='table table-sm table-hover table-responsive'>
-<thead>
-<tr>
-<th scope='col'>Date</th>
-<th scope='col'>Time</th>
-<th scope='col'>Host</th>
-<th scope='col'>Notes</th>
-</tr>
-</thead>
-<tbody>
-`;
+// Function to generate table rows for prayer meetings
+function generatePrayerTableRows(page, itemsPerPage) {
+    var start = (page - 1) * itemsPerPage;
+    var end = start + itemsPerPage;
+    var paginatedMeetings = prayermeetings.slice(start, end);
 
-var futureCount = 0;
-for(var i = prayermeetings.length - 1; i >= 0 && futureCount < 12; i--)
-{
-    if(prayermeetings[i].date.setHours(24, 0, 0, 0) >= new Date().setHours(0, 0, 0, 0)) {
-        tableHTML += `
+    var rows = '';
+    paginatedMeetings.forEach(meeting => {
+        rows += `
         <tr>
-        <td>${prayermeetings[i].date.toString().substring(0,15)}</td>
-        <td>${prayermeetings[i].time}</td>
-        <td>${prayermeetings[i].host}</td>
-        <td>${prayermeetings[i].notes}</td>
+            <td>${meeting.date.toString().substring(0, 15)}</td>
+            <td>${meeting.time}</td>
+            <td>${meeting.host}</td>
+            <td>${meeting.notes}</td>
         </tr>
-        `; 
-        futureCount++;
+        `;
+    });
+    return rows;
+}
+
+// Function to generate pagination for prayer meetings
+function generatePrayerPagination(page, itemsPerPage) {
+    var totalPages = Math.ceil(prayermeetings.length / itemsPerPage);
+    var paginationHTML = `<nav aria-label="Page navigation">
+                            <ul class="pagination justify-content-center">`;
+    
+    for (var i = 1; i <= totalPages; i++) {
+        paginationHTML += `<li class="page-item ${i === page ? 'active' : ''}">
+                                <a class="page-link" href="#prayermeetings" onclick="changePrayerPage(${i})">${i}</a>
+                            </li>`;
     }
-
+    
+    paginationHTML += `</ul></nav>`;
+    return paginationHTML;
 }
 
-if(futureCount > 0) {
-    tableHTML += `</tbody></table>`;
-} else {
-    // Message for no data
-    tableHTML = `<p class='lead text-center'>No Prayer Meetings scheduled<p>`;
+// Function to change the page for prayer meetings
+function changePrayerPage(page) {
+    var itemsPerPage = 5; // Number of items per page
+    var tableHTML = `
+    <table class='table table-sm table-hover table-responsive'>
+        <thead>
+            <tr>
+                <th scope='col'>Date</th>
+                <th scope='col'>Time</th>
+                <th scope='col'>Host</th>
+                <th scope='col'>Notes</th>
+            </tr>
+        </thead>
+        <tbody>
+            ${generatePrayerTableRows(page, itemsPerPage)}
+        </tbody>
+    </table>`;
+    
+    var paginationHTML = generatePrayerPagination(page, itemsPerPage);
+    
+    document.getElementById("pmTable").innerHTML = tableHTML + paginationHTML;
 }
-// Set div's innerHTML to new HTML
-document.getElementById("pmTable").innerHTML = tableHTML;
+
+// Initial load for prayer meetings
+changePrayerPage(1);

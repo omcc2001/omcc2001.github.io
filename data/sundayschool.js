@@ -247,45 +247,67 @@ var sundayschool = [
     },
 ];
 
-// Sorting the worshipservices array by date in ascending order
-sundayschool.sort((a, b) => b.date - a.date);
+// Sorting and reversing the array
+sundayschool.sort((a, b) => a.date - b.date).reverse();
 
-// Adding table with data to HTML
-var tableHTML = `
-<table class='table table-sm table-hover table-responsive'>
-<thead>
-<tr>
-<th scope='col'>Date</th>
-<th scope='col'>Time</th>
-<th scope='col'>Location</th>
-<th scope='col'>Notes</th>
-</tr>
-</thead>
-<tbody>
-`;
+// Function to generate table rows for Sunday School
+function generateSundayTableRows(page, itemsPerPage) {
+    var start = (page - 1) * itemsPerPage;
+    var end = start + itemsPerPage;
+    var paginatedSessions = sundayschool.slice(start, end);
 
-var futureCount = 0;
-for(var i = sundayschool.length - 1; i >= 0 && futureCount < 12; i--)
-{
-    if(sundayschool[i].date.setHours(24, 0, 0, 0) >= new Date().setHours(0, 0, 0, 0)) {
-        tableHTML += `
+    var rows = '';
+    paginatedSessions.forEach(session => {
+        rows += `
         <tr>
-        <td>${sundayschool[i].date.toString().substring(0,15)}</td>
-        <td>${sundayschool[i].time}</td>
-        <td>${sundayschool[i].location}</td>
-        <td>${sundayschool[i].notes}</td>
+            <td>${session.date.toString().substring(0, 15)}</td>
+            <td>${session.time}</td>
+            <td>${session.location}</td>
+            <td>${session.notes}</td>
         </tr>
-        `; 
-        futureCount++;
+        `;
+    });
+    return rows;
+}
+
+// Function to generate pagination for Sunday School
+function generateSundayPagination(page, itemsPerPage) {
+    var totalPages = Math.ceil(sundayschool.length / itemsPerPage);
+    var paginationHTML = `<nav aria-label="Page navigation">
+                            <ul class="pagination justify-content-center">`;
+    
+    for (var i = 1; i <= totalPages; i++) {
+        paginationHTML += `<li class="page-item ${i === page ? 'active' : ''}">
+                                <a class="page-link" href="#sundayschool" onclick="changeSundayPage(${i})">${i}</a>
+                            </li>`;
     }
-
+    
+    paginationHTML += `</ul></nav>`;
+    return paginationHTML;
 }
 
-if(futureCount > 0) {
-    tableHTML += `</tbody></table>`;
-} else {
-    // Message for no data
-    tableHTML = `<p class='lead text-center'>No Sunday School sessions scheduled<p>`;
+// Function to change the page for Sunday School
+function changeSundayPage(page) {
+    var itemsPerPage = 5; // Number of items per page
+    var tableHTML = `
+    <table class='table table-sm table-hover table-responsive'>
+        <thead>
+            <tr>
+                <th scope='col'>Date</th>
+                <th scope='col'>Time</th>
+                <th scope='col'>Location</th>
+                <th scope='col'>Notes</th>
+            </tr>
+        </thead>
+        <tbody>
+            ${generateSundayTableRows(page, itemsPerPage)}
+        </tbody>
+    </table>`;
+    
+    var paginationHTML = generateSundayPagination(page, itemsPerPage);
+    
+    document.getElementById("ssTable").innerHTML = tableHTML + paginationHTML;
 }
-// Set div's innerHTML to new HTML
-document.getElementById("ssTable").innerHTML = tableHTML;
+
+// Initial load for Sunday School
+changeSundayPage(1);
