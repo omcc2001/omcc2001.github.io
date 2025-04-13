@@ -106,8 +106,8 @@ var worshipservices = [
     {
         date: new Date("2025-02-22"), 
         time: "9:30 AM", 
-        denomination: "", 
-        priest:"",
+        denomination: "Mar Thoma", 
+        priest:"Rev. Joymon S.K.",
         location: SACC, 
         notes: ""
     },
@@ -137,9 +137,25 @@ var worshipservices = [
     },
     {
         date: new Date("2025-04-19"), 
-        time: "10:00 AM", 
+        time: "09:45 AM", 
         denomination: "CSI", 
-        priest:"",
+        priest:"Rev. Varghese Padiara Joseph",
+        location: SACC, 
+        notes: ""
+    },
+    {
+        date: new Date("2025-05-03"), 
+        time: "08:30 AM", 
+        denomination: "Jacobite", 
+        priest:"Rev. Fr. Movin Varghese",
+        location: SACC, 
+        notes: ""
+    },
+    {
+        date: new Date("2025-05-24"), 
+        time: "09:30 AM", 
+        denomination: "Mar Thoma", 
+        priest:"Rev. Kurian Jose",
         location: SACC, 
         notes: ""
     },
