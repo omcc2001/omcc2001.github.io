@@ -141,7 +141,7 @@ var worshipservices = [
         denomination: "CSI", 
         priest:"Rev. Varghese Padiara Joseph",
         location: SACC, 
-        notes: ""
+        notes: "Easter Egg Hunt"
     },
     {
         date: new Date("2025-05-03"), 
