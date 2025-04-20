@@ -2,8 +2,15 @@ var achens = [
     {
         name: "Rev. Dr. Itty Mathews",
         denomination: "CSI",
-        description: "Vicar of Church of South India Congregation of Michigan, Detroit, MI",
+        description: "Vicar of Church of South India Detroit, Royal Oak, MI",
         image: "itty-mathews.webp",
+        email: ""
+    },
+    {
+        name: "Rev. Varghese Padiara Joseph",
+        denomination: "CSI",
+        description: "Vicar of Church of South India Congregation of Great Lakes, Warren, MI",
+        image: "",
         email: ""
     },
     {
