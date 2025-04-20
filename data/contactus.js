@@ -36,10 +36,10 @@ var contacts = [
         image: "",
     },
     {
-        name: "Santhosh Varughese",
+        name: "Dr. Jason David",
         role: "Prayer Meeting Coordinator",
         email: "",
-        image: "santhosh-varughese.webp",
+        image: "",
     },
     {
         name: "Kezhiah Uthup",
