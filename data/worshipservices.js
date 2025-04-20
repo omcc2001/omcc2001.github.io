@@ -155,7 +155,7 @@ var worshipservices = [
         date: new Date("2025-05-24"), 
         time: "09:30 AM", 
         denomination: "Mar Thoma", 
-        priest:"Rev. Kurian Jose",
+        priest:"Rev. Kurien Jose",
         location: SACC, 
         notes: ""
     },
