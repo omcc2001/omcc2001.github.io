@@ -48,10 +48,10 @@ var contacts = [
         image: "",
     },
     {
-        name: "Mathew Ninan",
+        name: "Ajish Poonthuruthiyil",
         role: "Auditor",
         email: "",
-        image: "mathew-ninan.webp",
+        image: "",
     },
     {
         name: "Ben Kurian",
