@@ -2,28 +2,28 @@ var achens = [
     {
         name: "Rev. Dr. Itty Mathews",
         denomination: "CSI",
-        description: "Vicar of Church of South India Detroit, Royal Oak, MI",
+        description: "Vicar of Church of South India Detroit, MI",
         image: "itty-mathews.webp",
         email: ""
     },
     {
         name: "Rev. Varghese Padiara Joseph",
         denomination: "CSI",
-        description: "Vicar of Church of South India Congregation of Great Lakes, Warren, MI",
+        description: "Vicar of Church of South India Congregation of Great Lakes, MI",
         image: "",
         email: ""
     },
     {
         name: "Rev. Fr. Movin Varghese",
         denomination: "Jacobite",
-        description: "Vicar of St. Mary's Syrian Orthodox Church, Detroit, MI",
+        description: "Vicar of St. Mary's Syrian Orthodox Church, MI",
         image: "movin-varghese.webp",
         email: ""
     },
     {
         name: "Rev. Joymon S.K.",
         denomination: "Mar Thoma",
-        description: "Vicar of St. Thomas Mar Thoma Church, Indianapolis, IN",
+        description: "Vicar of St. Thomas Mar Thoma Church, IN",
         image: "joymon-sk.webp",
         email: "revjoymon@gmail.com"
     }
