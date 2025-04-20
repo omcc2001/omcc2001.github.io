@@ -18,7 +18,7 @@ var contacts = [
         image: "",
     },
     {
-        name: "Jobin David",
+        name: "Lloyd George",
         role: "Jacobite Representative",
         email: "",
         image: "",
@@ -42,7 +42,7 @@ var contacts = [
         image: "santhosh-varughese.webp",
     },
     {
-        name: "Diviya Jacob",
+        name: "Kezhiah Uthup",
         role: "Sunday School Coordinator",
         email: "",
         image: "",
