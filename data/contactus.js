@@ -42,7 +42,7 @@ var contacts = [
         image: "",
     },
     {
-        name: "Kezhiah Uthup",
+        name: "Keziah Uthup",
         role: "Sunday School Coordinator",
         email: "",
         image: "",
