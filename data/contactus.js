@@ -24,10 +24,10 @@ var contacts = [
         image: "",
     },
     {
-        name: "Dr. Jisna Paul",
+        name: "Libu George Thomas",
         role: "Mar Thoma Representative",
         email: "",
-        image: "jisna-paul.webp",
+        image: "",
     },
     {
         name: "Lloyd George",
