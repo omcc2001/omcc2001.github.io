@@ -21,11 +21,11 @@ var achens = [
         email: ""
     },
     {
-        name: "Rev. Joymon S.K.",
+        name: "Rev. Kurien Jose",
         denomination: "Mar Thoma",
         description: "Vicar of St. Thomas Mar Thoma Church, IN",
-        image: "joymon-sk.webp",
-        email: "revjoymon@gmail.com"
+        image: "",
+        email: ""
     }
 ];
 
