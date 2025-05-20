@@ -3,7 +3,7 @@ var contacts = [
         name: "Vineetha Thomas", 
         role: "OMCC Coordinator", 
         email: "omcc2001@gmail.com",
-        image: "",
+        image: "vineetha-thomas.webp",
     },
     {
         name: "Jacob Chacko", 

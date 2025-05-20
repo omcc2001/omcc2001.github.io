@@ -243,7 +243,7 @@ var sundayschool = [
         date: new Date("2025-05-11"), 
         time: "2:00 PM", 
         location: "", 
-        notes: "Last Day"
+        notes: "Last Day of Sunday School"
     },
 ];
 

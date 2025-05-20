@@ -10,7 +10,7 @@ var achens = [
         name: "Rev. Varghese Padiara Joseph",
         denomination: "CSI",
         description: "Vicar of Church of South India Congregation of Great Lakes, MI",
-        image: "",
+        image: "varghese-joseph.webp",
         email: ""
     },
     {
@@ -24,7 +24,7 @@ var achens = [
         name: "Rev. Kurien Jose",
         denomination: "Mar Thoma",
         description: "Vicar of St. Thomas Mar Thoma Church, IN",
-        image: "",
+        image: "kurien-jose.webp",
         email: ""
     }
 ];

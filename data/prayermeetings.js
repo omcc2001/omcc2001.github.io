@@ -1,5 +1,11 @@
 var prayermeetings = [ 
     {
+        date: new Date("2025-06-20"), 
+        time: "TBD", 
+        host: "<a href='https://maps.app.goo.gl/vwgytLfKZsQkTrW4A' target='_blank'>Maple Shelter, Alum Creek Lower Dam Area</a>", 
+        notes: "OMCC Picnic"
+    },
+    {
         date: new Date("2025-04-13"), 
         time: "5:00 PM", 
         host: "Preetha & Kurian Uthup", 
@@ -71,6 +77,7 @@ var prayermeetings = [
         host: "Anitha & Santhosh Varughese", 
         notes: ""
     },
+    
 ];
 
 // Sorting and reversing the array
@@ -128,7 +135,7 @@ function changePrayerPage(page) {
             <tr>
                 <th scope='col'>Date</th>
                 <th scope='col'>Time</th>
-                <th scope='col'>Host</th>
+                <th scope='col'>Host/Address</th>
                 <th scope='col'>Notes</th>
             </tr>
         </thead>
