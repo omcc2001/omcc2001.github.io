@@ -169,9 +169,9 @@ var worshipservices = [
     },
     {
         date: new Date("2025-08-02"), 
-        time: "TBD", 
+        time: "09:30 AM", 
         denomination: "Jacobite", 
-        priest:"",
+        priest:"Rev. Fr. Movin Varghese",
         location: SACC, 
         notes: ""
     },
