@@ -1,9 +1,15 @@
 var prayermeetings = [ 
     {
-        date: new Date("2025-06-20"), 
+        date: new Date("2025-07-20"), 
         time: "TBD", 
         host: "<a href='https://maps.app.goo.gl/vwgytLfKZsQkTrW4A' target='_blank'>Maple Shelter, Alum Creek Lower Dam Area</a>", 
         notes: "OMCC Picnic"
+    },
+    {
+        date: new Date("2025-06-14"), 
+        time: "5:00 PM", 
+        host: "Preetha & Thomas Pullumpallil", 
+        notes: ""
     },
     {
         date: new Date("2025-04-13"), 
@@ -77,7 +83,6 @@ var prayermeetings = [
         host: "Anitha & Santhosh Varughese", 
         notes: ""
     },
-    
 ];
 
 // Sorting and reversing the array
