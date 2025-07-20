@@ -175,6 +175,14 @@ var worshipservices = [
         location: SACC, 
         notes: ""
     },
+    {
+        date: new Date("2025-07-26"), 
+        time: "09:30 AM", 
+        denomination: "Jacobite", 
+        priest:"Rev. Kurien Jose",
+        location: SACC, 
+        notes: ""
+    },
 ];
 
 
