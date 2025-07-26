@@ -83,6 +83,24 @@ var prayermeetings = [
         host: "Anitha & Santhosh Varughese", 
         notes: ""
     },
+    {
+        date: new Date("2025-08-22"), 
+        time: "5:15 PM", 
+        host: "", 
+        notes: "VBS 2025 Day 1, <a href='https://docs.google.com/document/d/1wdACS4fqlEeqoy26Qvj5Yn6FwpISRVe-3d8mR9C-_fA/edit?usp=sharing'>Schedule</a>"
+    },
+    {
+        date: new Date("2025-08-23"), 
+        time: "9:00 AM", 
+        host: "", 
+        notes: "VBS 2025 Day 2, <a href='https://docs.google.com/document/d/1wdACS4fqlEeqoy26Qvj5Yn6FwpISRVe-3d8mR9C-_fA/edit?usp=sharing'>Schedule</a>"
+    },
+    {
+        date: new Date("2025-08-24"), 
+        time: "1:15 PM", 
+        host: "", 
+        notes: "VBS 2025 Day 3, <a href='https://docs.google.com/document/d/1wdACS4fqlEeqoy26Qvj5Yn6FwpISRVe-3d8mR9C-_fA/edit?usp=sharing'>Schedule</a>"
+    },
 ];
 
 // Sorting and reversing the array
