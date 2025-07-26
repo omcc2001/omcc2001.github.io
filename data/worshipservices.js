@@ -178,7 +178,7 @@ var worshipservices = [
     {
         date: new Date("2025-07-26"), 
         time: "09:30 AM", 
-        denomination: "Jacobite", 
+        denomination: "Mar Thoma", 
         priest:"Rev. Kurien Jose",
         location: SACC, 
         notes: ""
