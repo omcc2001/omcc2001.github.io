@@ -183,6 +183,22 @@ var worshipservices = [
         location: SACC, 
         notes: ""
     },
+    {
+        date: new Date("2025-08-24"), 
+        time: "05:00 PM", 
+        denomination: "Mar Thoma", 
+        priest:"Rev. Kurien Jose",
+        location: SACC, 
+        notes: ""
+    },
+    {
+        date: new Date("2025-09-13"), 
+        time: "05:30 PM", 
+        denomination: "Mar Thoma", 
+        priest:"Rev. Kurien Jose",
+        location: SACC, 
+        notes: ""
+    },
 ];
 
 
