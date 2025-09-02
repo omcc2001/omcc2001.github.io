@@ -24,7 +24,7 @@ var contacts = [
         image: "",
     },
     {
-        name: "Libu George Thomas",
+        name: "Kurian Uthup",
         role: "Mar Thoma Representative",
         email: "",
         image: "",
