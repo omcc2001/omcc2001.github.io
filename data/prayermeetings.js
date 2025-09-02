@@ -1,158 +1,60 @@
-var prayermeetings = [ 
-    {
-        date: new Date("2025-07-20"), 
-        time: "TBD", 
-        host: "<a href='https://maps.app.goo.gl/vwgytLfKZsQkTrW4A' target='_blank'>Maple Shelter, Alum Creek Lower Dam Area</a>", 
-        notes: "OMCC Picnic"
-    },
-    {
-        date: new Date("2025-06-14"), 
-        time: "5:00 PM", 
-        host: "Preetha & Thomas Pullumpallil", 
-        notes: ""
-    },
-    {
-        date: new Date("2025-04-13"), 
-        time: "5:00 PM", 
-        host: "Preetha & Kurian Uthup", 
-        notes: ""
-    },
-    {
-        date: new Date("2025-02-01"), 
-        time: "5:00 PM", 
-        host: "Rajani & Jacob Naduparambil", 
-        notes: ""
-    },
-    {
-        date: new Date("2024-11-02"), 
-        time: "5:00 PM", 
-        host: "Sheena & Lloyd George", 
-        notes: ""
-    },
-    {
-        date: new Date("2024-10-05"), 
-        time: "7:00 PM", 
-        host: "", 
-        notes: "Zoom"
-    },
-    {
-        date: new Date("2024-09-07"), 
-        time: "5:00 PM", 
-        host: "Drs. Jisna & Matthew Cherian", 
-        notes: ""
-    },
-    {
-        date: new Date("2024-08-10"), 
-        time: "4:00 PM", 
-        host: "Anitha & Santosh Varughese", 
-        notes: ""
-    },
-    {
-        date: new Date("2024-07-06"), 
-        time: "4:00 PM", 
-        host: "Jimcy & Jacob Jayan", 
-        notes: ""
-    },
-    {
-        date: new Date("2024-05-11"), 
-        time: "4:00 PM", 
-        host: "Bindya & Bright Devakadaksham Lilly", 
-        notes: ""
-    },
-    {
-        date: new Date("2023-05-10"), 
-        time: "4:00 PM", 
-        host: "Abraham & Mercy Thomas", 
-        notes: ""
-    },
-    {
-        date: new Date("2023-06-08"), 
-        time: "4:00 PM", 
-        host: "Preetha & Thomas Pullampallil", 
-        notes: ""
-    },
-    {
-        date: new Date("2023-07-06"), 
-        time: "4:00 PM", 
-        host: "Jimcy & Jacob Jayan", 
-        notes: ""
-    },
-    {
-        date: new Date("2023-08-10"), 
-        time: "4:00 PM", 
-        host: "Anitha & Santhosh Varughese", 
-        notes: ""
-    },
-    {
-        date: new Date("2025-08-22"), 
-        time: "5:15 PM", 
-        host: "", 
-        notes: "VBS 2025 Day 1, <a href='https://docs.google.com/document/d/1wdACS4fqlEeqoy26Qvj5Yn6FwpISRVe-3d8mR9C-_fA/edit?usp=sharing'>Schedule</a>"
-    },
-    {
-        date: new Date("2025-08-23"), 
-        time: "9:00 AM", 
-        host: "", 
-        notes: "VBS 2025 Day 2, <a href='https://docs.google.com/document/d/1wdACS4fqlEeqoy26Qvj5Yn6FwpISRVe-3d8mR9C-_fA/edit?usp=sharing'>Schedule</a>"
-    },
-    {
-        date: new Date("2025-08-24"), 
-        time: "1:15 PM", 
-        host: "", 
-        notes: "VBS 2025 Day 3, <a href='https://docs.google.com/document/d/1wdACS4fqlEeqoy26Qvj5Yn6FwpISRVe-3d8mR9C-_fA/edit?usp=sharing'>Schedule</a>"
-    },
-];
+import { createClient } from "https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm";
 
-// Sorting and reversing the array
-prayermeetings.sort((a, b) => a.date - b.date).reverse();
+const SUPABASE_URL = "https://mwajpetsjmdgxoxzqfgl.supabase.co";
+const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im13YWpwZXRzam1kZ3hveHpxZmdsIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTY3ODE4NzMsImV4cCI6MjA3MjM1Nzg3M30.iZ-zRUyg2ra8PIRXKOaxLviuvM5c-jz58wM1Sahvr00";
 
-// Function to adjust the date by adding one day
-function adjustDate(date) {
-    const adjustedDate = new Date(date);
-    adjustedDate.setDate(adjustedDate.getDate() + 1); // Add one day
-    return adjustedDate.toString().substring(0, 15); // Format as "Day Month Date Year"
-}
+const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
-// Function to generate table rows for prayer meetings
-function generatePrayerTableRows(page, itemsPerPage) {
-    var start = (page - 1) * itemsPerPage;
-    var end = start + itemsPerPage;
-    var paginatedMeetings = prayermeetings.slice(start, end);
+let specialEvents = [];
 
-    var rows = '';
-    paginatedMeetings.forEach(meeting => {
-        rows += `
-        <tr>
-            <td>${adjustDate(meeting.date)}</td>
-            <td>${meeting.time}</td>
-            <td>${meeting.host}</td>
-            <td>${meeting.notes}</td>
-        </tr>
-        `;
-    });
-    return rows;
-}
+async function loadSpecialEvents() {
+    try {
+        const now = new Date();
+        const firstOfYear = new Date(now.getFullYear(), 0, 1).toISOString(); // Jan 1 current year
 
-// Function to generate pagination for prayer meetings
-function generatePrayerPagination(page, itemsPerPage) {
-    var totalPages = Math.ceil(prayermeetings.length / itemsPerPage);
-    var paginationHTML = `<nav aria-label="Page navigation">
-                            <ul class="pagination justify-content-center">`;
-    
-    for (var i = 1; i <= totalPages; i++) {
-        paginationHTML += `<li class="page-item ${i === page ? 'active' : ''}">
-                                <a class="page-link" href="#prayermeetings" onclick="changePrayerPage(${i})">${i}</a>
-                            </li>`;
+        const { data, error } = await supabase
+            .from('special_events')
+            .select('*')
+            .gte('date', firstOfYear)           // filter: current year and future
+            .order('date', { ascending: false }); // latest events first
+
+        if (error) throw error;
+
+        if (!data || data.length === 0) {
+            document.getElementById("pmTable").innerHTML = "<p>No events found.</p>";
+            console.log("No events returned from Supabase.");
+            return;
+        }
+
+        specialEvents = data.map(event => {
+            const dt = new Date(event.date);
+            // Format date and time in EST/EDT
+            const dateStr = dt.toLocaleDateString('en-US', {
+                weekday: 'short', month: 'short', day: 'numeric', year: 'numeric',
+                timeZone: 'America/New_York'
+            });
+            const timeStr = dt.toLocaleTimeString('en-US', {
+                hour: 'numeric', minute: '2-digit', timeZone: 'America/New_York'
+            });
+            return {
+                date: dateStr,
+                time: timeStr === '12:00 AM' ? 'TBD' : timeStr,
+                host: event.host || "",
+                notes: event.notes || ""
+            };
+        });
+
+        changeEventPage(1);
+
+    } catch (err) {
+        console.error("Error fetching special events:", err);
+        document.getElementById("pmTable").innerHTML = "<p>Error loading events.</p>";
     }
-    
-    paginationHTML += `</ul></nav>`;
-    return paginationHTML;
 }
 
-// Function to change the page for prayer meetings
-function changePrayerPage(page) {
-    var itemsPerPage = 5; // Number of items per page
-    var tableHTML = `
+window.changeEventPage = function(page) {
+    const itemsPerPage = 5;
+    const tableHTML = `
     <table class='table table-sm table-hover table-responsive'>
         <thead>
             <tr>
@@ -163,14 +65,26 @@ function changePrayerPage(page) {
             </tr>
         </thead>
         <tbody>
-            ${generatePrayerTableRows(page, itemsPerPage)}
+            ${specialEvents.slice((page-1)*itemsPerPage, page*itemsPerPage).map(e => `
+                <tr>
+                    <td>${e.date}</td>
+                    <td>${e.time}</td>
+                    <td>${e.host}</td>
+                    <td>${e.notes}</td>
+                </tr>`).join('')}
         </tbody>
     </table>`;
-    
-    var paginationHTML = generatePrayerPagination(page, itemsPerPage);
-    
+
+    const totalPages = Math.ceil(specialEvents.length / itemsPerPage);
+    let paginationHTML = `<nav aria-label="Page navigation"><ul class="pagination justify-content-center">`;
+    for (let i=1; i<=totalPages; i++) {
+        paginationHTML += `<li class="page-item ${i===page?'active':''}">
+            <a class="page-link" href="#specialevents" onclick="changeEventPage(${i})">${i}</a></li>`;
+    }
+    paginationHTML += `</ul></nav>`;
+
     document.getElementById("pmTable").innerHTML = tableHTML + paginationHTML;
 }
 
-// Initial load for prayer meetings
-changePrayerPage(1);
+// Load events after DOM is ready
+document.addEventListener('DOMContentLoaded', loadSpecialEvents);

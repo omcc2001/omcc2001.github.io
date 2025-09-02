@@ -1,259 +1,105 @@
-var worshipservices = [
-    {
-        date: new Date("2024-02-24"), 
-        time: "9:30 AM", 
-        denomination: "Mar Thoma", 
-        priest:"Rev. Joymon SK",
-        location: SACC, 
-        notes: ""
-    },
-    {
-        date: new Date("2024-01-27"), 
-        time: "9:30 AM", 
-        denomination: "Mar Thoma", 
-        priest:"Rev. Joymon SK",
-        location: SACC, 
-        notes: ""
-    },
-    {
-        date: new Date("2024-03-23"), 
-        time: "9:30 AM", 
-        denomination: "Mar Thoma", 
-        priest:"Rev. Joymon S.K.",
-        location: SACC, 
-        notes: ""
-    },
-    {
-        date: new Date("2024-04-27"), 
-        time: "9:30 AM", 
-        denomination: "CSI", 
-        priest:"Rev. Dr. Itty Mathews",
-        location: SACC, 
-        notes: "Annual General Body Meeting"
-    },
-    {
-        date: new Date("2024-05-04"), 
-        time: "9:30 AM", 
-        denomination: "Jacobite", 
-        priest:"Rev. Varghese P. Kuriakose",
-        location: SACC, 
-        notes: ""
-    },
-    {
-        date: new Date("2024-05-25"), 
-        time: "9:30 AM", 
-        denomination: "Mar Thoma", 
-        priest:"Rev. Joymon S.K.",
-        location: SACC, 
-        notes: ""
-    },
-    {
-        date: new Date("2024-06-22"), 
-        time: "4:00 PM", 
-        denomination: "Mar Thoma", 
-        priest:"Rev. Joymon S.K.",
-        location: SACC, 
-        notes: ""
-    },
-    {
-        date: new Date("2024-07-27"), 
-        time: "9:30 AM", 
-        denomination: "Mar Thoma", 
-        priest:"Rev. Joymon S.K.",
-        location: SACC, 
-        notes: ""
-    },
-    {
-        date: new Date("2024-08-24"), 
-        time: "9:30 AM", 
-        denomination: "Mar Thoma", 
-        priest:"Rev. Joymon S.K.",
-        location: SACC, 
-        notes: ""
-    },
-    {
-        date: new Date("2024-09-21"), 
-        time: "9:30 AM", 
-        denomination: "Mar Thoma", 
-        priest:"Rev. Joymon S.K.",
-        location: SACC, 
-        notes: ""
-    },
-    {
-        date: new Date("2024-10-26"), 
-        time: "9:30 AM", 
-        denomination: "Mar Thoma", 
-        priest:"Rev. Joymon S.K.",
-        location: SACC, 
-        notes: ""
-    },
-    {
-        date: new Date("2024-12-14"), 
-        time: "6:00 PM", 
-        denomination: "", 
-        priest:"",
-        location: SACC, 
-        notes: "Christmas Service"
-    },
-    {
-        date: new Date("2025-01-25"), 
-        time: "9:30 AM", 
-        denomination: "Mar Thoma", 
-        priest:"Rev. Joymon S.K.",
-        location: SACC, 
-        notes: ""
-    },
-    {
-        date: new Date("2025-02-22"), 
-        time: "9:30 AM", 
-        denomination: "Mar Thoma", 
-        priest:"Rev. Joymon S.K.",
-        location: SACC, 
-        notes: ""
-    },
-    {
-        date: new Date("2025-02-22"), 
-        time: "9:30 AM", 
-        denomination: "Mar Thoma", 
-        priest:"Rev. Joymon S.K.",
-        location: SACC, 
-        notes: ""
-    },
-    {
-        date: new Date("2025-03-15"), 
-        time: "4:30 PM", 
-        denomination: "Mar Thoma", 
-        priest:"Rev. Joymon S.K.",
-        location: SACC, 
-        notes: "Achen's Farewell Service"
-    },
-    {
-        date: new Date("2025-04-12"), 
-        time: "9:30 AM", 
-        denomination: "Mar Thoma", 
-        priest:"Rev. Joymon S.K.",
-        location: SACC, 
-        notes: "Annual General Body Meeting"
-    },
-    {
-        date: new Date("2025-04-19"), 
-        time: "09:45 AM", 
-        denomination: "CSI", 
-        priest:"Rev. Varghese Padiara Joseph",
-        location: SACC, 
-        notes: "Easter Egg Hunt"
-    },
-    {
-        date: new Date("2025-05-03"), 
-        time: "08:30 AM", 
-        denomination: "Jacobite", 
-        priest:"Rev. Fr. Movin Varghese",
-        location: SACC, 
-        notes: ""
-    },
-    {
-        date: new Date("2025-05-24"), 
-        time: "09:30 AM", 
-        denomination: "Mar Thoma", 
-        priest:"Rev. Kurien Jose",
-        location: SACC, 
-        notes: ""
-    },
-    {
-        date: new Date("2025-06-21"), 
-        time: "04:30 PM", 
-        denomination: "Mar Thoma", 
-        priest:"Rev. Kurien Jose",
-        location: SACC, 
-        notes: ""
-    },
-    {
-        date: new Date("2025-08-02"), 
-        time: "09:30 AM", 
-        denomination: "Jacobite", 
-        priest:"Rev. Fr. Movin Varghese",
-        location: SACC, 
-        notes: ""
-    },
-    {
-        date: new Date("2025-07-26"), 
-        time: "09:30 AM", 
-        denomination: "Mar Thoma", 
-        priest:"Rev. Kurien Jose",
-        location: SACC, 
-        notes: ""
-    },
-    {
-        date: new Date("2025-08-24"), 
-        time: "05:00 PM", 
-        denomination: "Mar Thoma", 
-        priest:"Rev. Kurien Jose",
-        location: SACC, 
-        notes: ""
-    },
-    {
-        date: new Date("2025-09-13"), 
-        time: "05:30 PM", 
-        denomination: "Mar Thoma", 
-        priest:"Rev. Kurien Jose",
-        location: SACC, 
-        notes: ""
-    },
-];
+import { createClient } from "https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm";
 
+const SUPABASE_URL = "https://mwajpetsjmdgxoxzqfgl.supabase.co";
+const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im13YWpwZXRzam1kZ3hveHpxZmdsIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTY3ODE4NzMsImV4cCI6MjA3MjM1Nzg3M30.iZ-zRUyg2ra8PIRXKOaxLviuvM5c-jz58wM1Sahvr00";
 
-// Sorting and reversing the array
-worshipservices.sort((a, b) => a.date - b.date).reverse();
+const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
-// Function to adjust the date by adding one day
-function adjustDate(date) {
-    const adjustedDate = new Date(date);
-    adjustedDate.setDate(adjustedDate.getDate() + 1); // Add one day
-    return adjustedDate.toString().substring(0, 15); // Format as "Day Month Date Year"
+let worshipServices = [];
+
+async function loadWorshipServices() {
+    try {
+        const now = new Date();
+        const firstOfYear = new Date(now.getFullYear(), 0, 1).toISOString(); // Jan 1 current year
+
+        const { data, error } = await supabase
+            .from('worship_services')
+            .select('*')
+            .gte('date', firstOfYear)           // filter: current year and future
+            .order('date', { ascending: false }); // latest events first
+
+        if (error) throw error;
+
+        if (!data || data.length === 0) {
+            document.getElementById("wsTable").innerHTML = "<p>No Worship Services found.</p>";
+            console.log("No events returned from Supabase.");
+            return;
+        }
+
+        worshipServices = data.map(event => {
+            const dt = new Date(event.date);
+            
+            // Convert to EST for display
+            const dateStr = dt.toLocaleDateString('en-US', {
+                weekday: 'short', month: 'short', day: 'numeric', year: 'numeric',
+                timeZone: 'America/New_York'
+            });
+            const timeStr = dt.toLocaleTimeString('en-US', {
+                hour: 'numeric', minute: '2-digit', timeZone: 'America/New_York'
+            });
+
+            // Location HTML
+            let locationHTML = "";
+            if (event.location === "SACC") {
+                locationHTML = `<a href='https://www.google.com/maps/place/1980+Swansford+Dr,+Dublin,+OH+43016' data-bs-toggle='tooltip' data-bs-title='1980 Swansford Dr, Dublin, OH 43016'>SACC</a> <i class='fa-solid fa-church'></i>`;
+            } else if (event.location === "ZOOM") {
+                locationHTML = "Zoom <i class='fa-solid fa-video'></i>";
+            } else {
+                locationHTML = event.location || "";
+            }
+
+            return {
+                date: dateStr,
+                time: timeStr === '12:00 AM' ? 'TBD' : timeStr,
+                denomination: event.denomination || "",
+                priest: event.priest || "",
+                location: locationHTML,
+                notes: event.notes || ""
+            };
+        });
+
+        changeWorshipPage(1);
+
+    } catch (err) {
+        console.error("Error fetching Worship Services:", err);
+        document.getElementById("wsTable").innerHTML = "<p>Error loading events.</p>";
+    }
 }
 
-// Function to generate table rows for worship services
 function generateWorshipTableRows(page, itemsPerPage) {
-    var start = (page - 1) * itemsPerPage;
-    var end = start + itemsPerPage;
-    var paginatedServices = worshipservices.slice(start, end);
+    const start = (page - 1) * itemsPerPage;
+    const end = start + itemsPerPage;
+    const paginated = worshipServices.slice(start, end);
 
-    var rows = '';
-    paginatedServices.forEach(service => {
-        rows += `
+    return paginated.map(service => `
         <tr>
-            <td>${adjustDate(service.date)}</td>
+            <td>${service.date}</td>
             <td>${service.time}</td>
             <td>${service.denomination}</td>
             <td>${service.priest}</td>
             <td>${service.location}</td>
             <td>${service.notes}</td>
         </tr>
-        `;
-    });
-    return rows;
+    `).join('');
 }
 
-// Function to generate pagination for worship services
 function generateWorshipPagination(page, itemsPerPage) {
-    var totalPages = Math.ceil(worshipservices.length / itemsPerPage);
-    var paginationHTML = `<nav aria-label="Page navigation">
-                            <ul class="pagination justify-content-center">`;
+    const totalPages = Math.ceil(worshipServices.length / itemsPerPage);
+    let paginationHTML = `<nav aria-label="Page navigation"><ul class="pagination justify-content-center">`;
     
-    for (var i = 1; i <= totalPages; i++) {
+    for (let i = 1; i <= totalPages; i++) {
         paginationHTML += `<li class="page-item ${i === page ? 'active' : ''}">
-                                <a class="page-link" href="#worshipservices" onclick="changeWorshipPage(${i})">${i}</a>
-                            </li>`;
+            <a class="page-link" href="#worshipservices" onclick="changeWorshipPage(${i})">${i}</a>
+        </li>`;
     }
     
     paginationHTML += `</ul></nav>`;
     return paginationHTML;
 }
 
-// Function to change the page for worship services
-function changeWorshipPage(page) {
-    var itemsPerPage = 5; // Number of items per page
-    var tableHTML = `
+window.changeWorshipPage = function(page) {
+    const itemsPerPage = 5;
+    const tableHTML = `
     <table class='table table-sm table-hover table-responsive'>
         <thead>
             <tr>
@@ -269,11 +115,10 @@ function changeWorshipPage(page) {
             ${generateWorshipTableRows(page, itemsPerPage)}
         </tbody>
     </table>`;
-    
-    var paginationHTML = generateWorshipPagination(page, itemsPerPage);
-    
+
+    const paginationHTML = generateWorshipPagination(page, itemsPerPage);
     document.getElementById("wsTable").innerHTML = tableHTML + paginationHTML;
 }
 
-// Initial load for worship services
-changeWorshipPage(1);
+// Load worship services after DOM is ready
+document.addEventListener('DOMContentLoaded', loadWorshipServices);
