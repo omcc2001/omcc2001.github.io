@@ -1,5 +1,179 @@
 var sundayschool = [ 
+                                    {
+        date: new Date("2026-05-10"), 
+        time: "2:00 PM", 
+        location: ZOOM, 
+        notes: "Diocesan Exam"
+    },
+                                {
+        date: new Date("2026-05-03"), 
+        time: "2:00 PM", 
+        location: ZOOM, 
+        notes: ""
+    },
+                                {
+        date: new Date("2026-04-26"), 
+        time: "2:00 PM", 
+        location: ZOOM, 
+        notes: ""
+    },
+                                {
+        date: new Date("2026-04-19"), 
+        time: "2:00 PM", 
+        location: ZOOM, 
+        notes: ""
+    },
+                            {
+        date: new Date("2026-04-12"), 
+        time: "2:00 PM", 
+        location: ZOOM, 
+        notes: ""
+    },
+                        {
+        date: new Date("2026-03-22"), 
+        time: "2:00 PM", 
+        location: ZOOM, 
+        notes: ""
+    },
+                        {
+        date: new Date("2026-03-15"), 
+        time: "2:00 PM", 
+        location: ZOOM, 
+        notes: ""
+    },
+                        {
+        date: new Date("2026-03-08"), 
+        time: "2:00 PM", 
+        location: ZOOM, 
+        notes: ""
+    },
+                    {
+        date: new Date("2026-03-01"), 
+        time: "2:00 PM", 
+        location: ZOOM, 
+        notes: ""
+    },
+                    {
+        date: new Date("2026-02-22"), 
+        time: "2:00 PM", 
+        location: ZOOM, 
+        notes: ""
+    },
+                    {
+        date: new Date("2026-02-15"), 
+        time: "2:00 PM", 
+        location: ZOOM, 
+        notes: ""
+    },
+                    {
+        date: new Date("2026-02-08"), 
+        time: "2:00 PM", 
+        location: ZOOM, 
+        notes: ""
+    },
+                {
+        date: new Date("2026-02-01"), 
+        time: "2:00 PM", 
+        location: ZOOM, 
+        notes: ""
+    },
+                {
+        date: new Date("2026-01-25"), 
+        time: "2:00 PM", 
+        location: ZOOM, 
+        notes: ""
+    },
+                {
+        date: new Date("2026-01-18"), 
+        time: "2:00 PM", 
+        location: ZOOM, 
+        notes: ""
+    },
+            {
+        date: new Date("2026-01-11"), 
+        time: "2:00 PM", 
+        location: ZOOM, 
+        notes: ""
+    },
+            {
+        date: new Date("2025-12-07"), 
+        time: "2:00 PM", 
+        location: ZOOM, 
+        notes: ""
+    },
+            {
+        date: new Date("2025-11-23"), 
+        time: "2:00 PM", 
+        location: ZOOM, 
+        notes: ""
+    },
+            {
+        date: new Date("2025-11-16"), 
+        time: "2:00 PM", 
+        location: ZOOM, 
+        notes: ""
+    },
+            {
+        date: new Date("2025-11-09"), 
+        time: "2:00 PM", 
+        location: ZOOM, 
+        notes: ""
+    },
+        {
+        date: new Date("2025-11-02"), 
+        time: "2:00 PM", 
+        location: ZOOM, 
+        notes: ""
+    },
+        {
+        date: new Date("2025-10-26"), 
+        time: "2:00 PM", 
+        location: ZOOM, 
+        notes: ""
+    },
+        {
+        date: new Date("2025-10-19"), 
+        time: "2:00 PM", 
+        location: ZOOM, 
+        notes: ""
+    },
+     {
+        date: new Date("2025-10-12"), 
+        time: "2:00 PM", 
+        location: ZOOM, 
+        notes: ""
+    },
     {
+        date: new Date("2025-10-05"), 
+        time: "2:00 PM", 
+        location: ZOOM, 
+        notes: ""
+    },
+    {
+        date: new Date("2025-09-28"), 
+        time: "2:00 PM", 
+        location: ZOOM, 
+        notes: ""
+    },
+    {
+        date: new Date("2025-09-21"), 
+        time: "2:00 PM", 
+        location: ZOOM, 
+        notes: ""
+    },
+    {
+        date: new Date("2025-09-14"), 
+        time: "2:00 PM", 
+        location: ZOOM, 
+        notes: ""
+    },
+    {
+        date: new Date("2025-09-07"), 
+        time: "2:00 PM", 
+        location: ZOOM, 
+        notes: ""
+    },
+/*  {
         date: new Date("2024-03-28"), 
         time: "2:00 PM", 
         location: ZOOM, 
@@ -245,6 +419,7 @@ var sundayschool = [
         location: "", 
         notes: "Last Day of Sunday School"
     },
+*/
 ];
 
 // Sorting and reversing the array
